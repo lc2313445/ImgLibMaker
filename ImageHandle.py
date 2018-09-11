@@ -37,7 +37,7 @@ def write_log(Path_Dir):
             log_hander.write('Total Size: {:.5f} MB\n'.format((each_folder_size/1024/1024)))
     log_hander.close()
 
-def Pickle_Convert_Img_To_CSV(Path_Dir,reshape=reshape,img_num_each_file=img_num_each_file,test_num_each_class=test_num_each_class): 
+def Pickle_Convert_Img(Path_Dir,reshape=reshape,img_num_each_file=img_num_each_file,test_num_each_class=test_num_each_class): 
     folders=os.listdir(Path_Dir)
     index_and_name=list(enumerate(folders))
     whole_num=0
@@ -155,8 +155,8 @@ def Pickle_Convert_Img_To_CSV(Path_Dir,reshape=reshape,img_num_each_file=img_num
                         Test_img_label_total=np.array([])
 def load_pickle():
     testfile2=open(os.path.join(Path_Dir,'Test_Data0.pkl'),'rb')
-    a1=pickle.load(testfile2)
-    a2=pickle.load(testfile2)
+    img=pickle.load(testfile2)
+    label=pickle.load(testfile2)
     testfile2.close
     print('for test')
 
@@ -166,5 +166,5 @@ def load_pickle():
 if __name__=='__main__':
     write_log(Path_Dir)
     #convert_image_to_CSV(Path_Dir)
-    #Pickle_Convert_Img_To_CSV(Path_Dir)
-    load_pickle()
+    Pickle_Convert_Img(Path_Dir)
+    #load_pickle()
