@@ -17,13 +17,9 @@ The main program is **ImageHandle.py** and there are four input arguments for th
 
 --Path_Dir is the direction of your images stored, your image recommanded to store in one folder like this:
 
-<table board="100">
-  <tr>
-    <td>
-![](MarkDownImg/img.png)   
-    </td>
-  </tr>
-</table>
+<center>
+  <img src="MarkDownImg/img.png" alt="Img Broken" border=3 width="60%" height="60%"/>
+</center>
 
 
 <ul class='background-message'>
