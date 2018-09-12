@@ -17,8 +17,9 @@ The main program is **ImageHandle.py** and there are four input arguments for th
 
 --Path_Dir is the direction of your images stored, your image recommanded to store in one folder like this:
 
-![](MarkDownImg/img.png)
-
+<ul class='background-message'>
+  <li>![](MarkDownImg/img.png)</li>
+</ul>
 
 
 ### aa
