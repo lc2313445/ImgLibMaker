@@ -18,8 +18,12 @@ The main program is **ImageHandle.py** and there are four input arguments for th
 --Path_Dir is the direction of your images stored, your image recommanded to store in one folder like this:
 
 <center>
-  <img src="https://github.com/lc2313445/Image_Store/blob/master/img.png" alt="Img Broken" border=3 width="60%" height="60%"/>
+  <img src="https://github.com/lc2313445/Image_Store/blob/master/ImageHandle1.png" alt="Img Broken" border=3 width="60%" height="60%"/>
 </center>
+
+
+
+
 
 
 <ul class='background-message'>
