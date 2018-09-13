@@ -27,35 +27,20 @@ It is **<font color=#990000>very important</font>** that you can only contains f
 
 So what's the meaning? I have three image classes, first class is 'human hands', those pictures are all contains in P-0000, second class is 'mouse' which contains in P-0001 and the last is 'cell phone' which contains in P-0002. If you run this program, it will generate a (or several) .plk file(s) which contains the raw images and their labels(classes), so P-0000 will have label '0', P-0001 will have label '1' etc.
 
-So do not contains any folder which is not for zip your images, and the name must be P-XXXX
+So do not contains any folder which is not for zipping your images. Again, the folder name must be P-XXXX.
 
+--reshape means reshape all the images to the same size, it takes a tuple, the default is (320,240).
 
+--img_num_each_file means how many pictures each .plk file contains. the default is 500, if your image number exceed this parameter, it will generate another .plk that increase its index automaticly
 
+--test_num_each_class means how many images for test for each class. Due to this program is for neural network training, so the for ordinary, we should have a training image set and a test image set, this parameter is for this porpuse, if you set it to 100, it will take out 100 images from each folder names 'P-XXXX' and generate a Test_DataX.plk file. The default number is 0.
 
+You can use following program to load .plk file:
 
-
-
-
-### aa
-#### aa
-##### aa
-
-```python
-import numpy as np
-
+``` Python
+  testfile=open(os.path.join(Path_Dir,'Test_Data0.pkl'),'rb')
+  image=pickle.load(testfile)
+  label=pickle.load(testfile)
+  testfile2.close
 ```
-1.  <p> This is code </p>
-<pre><code>
-  write_log(Path_Dir)
-  &amp;copy; asarray
-</code><pre>
-* c
-***
----
-
-I got a web [__baidu__] [id]
-
-  [id]: www.baidu.com "aaa"
-
-
-this is <code>printf()</code> func
+The pickle file contains two dictionary one names 'image', the other names 'label', note that the program reshape the image in one row, so if you want to restore the image, you should reshape by yourself.

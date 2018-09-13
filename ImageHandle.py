@@ -166,5 +166,5 @@ def load_pickle():
 if __name__=='__main__':
     write_log(Path_Dir)
     #convert_image_to_CSV(Path_Dir)
-    Pickle_Convert_Img(Path_Dir)
-    #load_pickle()
+    #Pickle_Convert_Img(Path_Dir)
+    load_pickle()
